@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meowchi — Your stop for a purr-feet bite</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Caveat:wght@400;600;700&family=Quicksand:wght@400;500;600;700&family=Yuji+Mai&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="src/styles.css?v=11">
+<link rel="icon" href="assets/logo.jpg">
+</head>
+<body data-theme="cream" data-accent="green">
+
+<!-- Tweakable defaults (host can rewrite) -->
+<script>
+window.TWEAKS = /*EDITMODE-BEGIN*/{
+  "theme": "cream",
+  "accent": "green",
+  "featured": "poppy"
+}/*EDITMODE-END*/;
+</script>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#top" class="nav-brand">
+    <img src="assets/logo.jpg" alt="Meowchi">
+    <span class="wordmark">Meowchi</span>
+  </a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#mochi">The Family</a>
+    <a href="#goal">Our Goal</a>
+    <a href="#fotm">Flavor of Month</a>
+    <a href="#testimonials">Kind Words</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <a href="#order" class="nav-cta">Order →</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="cloud c1"></div>
+  <div class="cloud c2"></div>
+  <div class="cloud c3"></div>
+  <div class="sparkle" style="top:22%;left:12%;">✦</div>
+  <div class="sparkle" style="top:70%;left:8%;animation-delay:-0.8s;">✧</div>
+  <div class="sparkle" style="top:18%;right:40%;animation-delay:-1.4s;">✦</div>
+
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <h1 class="display">
+        <span class="kana">にゃー ポッピー・シャ・ゾロ</span>
+        Meowchi.
+      </h1>
+      <div class="tagline">Your stop for a purr-feet bite.</div>
+      <p class="lead">
+        Three cats. Three flavors. One pillowy mochi. Hand-folded small-batch
+        daifuku starring Poppy, Chat &amp; Zoro — the chonkiest little characters
+        you'll ever taste.
+      </p>
+      <div class="hero-ctas">
+        <a href="#order" class="btn-primary">Want some Meowchi? →</a>
+        <a href="#mochi" class="btn-ghost">Meet the family</a>
+      </div>
+    </div>
+    <div class="hero-stage">
+      <div class="floaty p1"><img src="assets/poppy.svg" alt=""></div>
+      <div class="floaty p2"><img src="assets/zoro.svg" alt=""></div>
+      <div class="floaty p3"><img src="assets/chat.svg" alt=""></div>
+      <div class="giant-mochi" id="giantMochi">
+        <!-- A big, central mochi blob that squishes on scroll -->
+        <svg viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="gm-wob">
+              <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="2" seed="5"/>
+              <feDisplacementMap in="SourceGraphic" scale="4"/>
+            </filter>
+            <radialGradient id="gm-grad" cx="40%" cy="35%" r="75%">
+              <stop offset="0%" stop-color="#fcdbe6"/>
+              <stop offset="70%" stop-color="#f4b6c9"/>
+              <stop offset="100%" stop-color="#d9758a"/>
+            </radialGradient>
+          </defs>
+          <g filter="url(#gm-wob)">
+            <path d="M 80 210 Q 55 160 90 120 Q 110 75 160 95 Q 190 55 220 85 Q 260 60 290 100 Q 340 95 355 145 Q 390 180 360 230 Q 380 280 325 295 Q 290 320 235 308 Q 180 325 135 305 Q 75 290 80 210 Z"
+                  fill="url(#gm-grad)" stroke="#4a2c1a" stroke-width="5"/>
+            <!-- ears -->
+            <path d="M 125 112 L 110 65 L 160 92 Z" fill="#f4b6c9" stroke="#4a2c1a" stroke-width="5"/>
+            <path d="M 275 92 L 310 62 L 305 118 Z" fill="#f4b6c9" stroke="#4a2c1a" stroke-width="5"/>
+            <path d="M 132 105 L 125 78 L 150 92 Z" fill="#c8627e"/>
+            <path d="M 284 90 L 298 70 L 298 108 Z" fill="#c8627e"/>
+            <!-- eyes -->
+            <ellipse cx="170" cy="185" rx="13" ry="19" fill="#4a2c1a"/>
+            <ellipse cx="258" cy="185" rx="13" ry="19" fill="#4a2c1a"/>
+            <circle cx="174" cy="178" r="5" fill="#fff"/>
+            <circle cx="262" cy="178" r="5" fill="#fff"/>
+            <!-- cheeks -->
+            <ellipse cx="140" cy="225" rx="28" ry="18" fill="#ff8aa8" opacity="0.55"/>
+            <ellipse cx="288" cy="225" rx="28" ry="18" fill="#ff8aa8" opacity="0.55"/>
+            <!-- nose & smile -->
+            <path d="M 207 215 Q 215 222 223 215 Q 219 228 215 230 Q 211 228 207 215 Z" fill="#c8627e" stroke="#4a2c1a" stroke-width="2"/>
+            <path d="M 195 238 Q 215 252 235 238" stroke="#4a2c1a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">scroll &amp; squish<br>↓</div>
+</header>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <div class="eyebrow">our little story</div>
+        <h2>A tiny kitchen<br>with three cats<br>and a dream.</h2>
+        <p>Meowchi started in a second-floor apartment with one rice cooker, a very patient roommate, and a running joke about which of the three cats each flavor looked most like. The joke stuck. The cats named themselves. The mochi kept disappearing from the counter.</p>
+        <p>Every daifuku is still folded by hand in small batches — no factory, no preservatives, no rush. We source glutinous rice from a single mill, strawberries from the farmer up the road, and matcha flown in from Uji. The chocolate? That's a secret. (Ask Chat.)</p>
+        <p>We make mochi the way our cats nap: slowly, deliberately, and with complete disregard for reasonable hours.</p>
+      </div>
+      <div class="about-photo reveal"></div>
+    </div>
+  </div>
+</section>
+
+<!-- MOCHI FAMILY -->
+<section class="section characters" id="mochi">
+  <div class="section-inner">
+    <div class="eyebrow">meet the trio</div>
+    <h2>The Mochi Family.</h2>
+    <p class="section-sub">Each Meowchi is its own little cat with its own little personality. Pick a favorite — they won't be offended. (Well, Chat might be.)</p>
+    <div class="char-row" id="charRow"></div>
+  </div>
+</section>
+
+<!-- OWNER'S GOAL -->
+<section class="section goal" id="goal">
+  <div class="section-inner">
+    <div class="goal-body reveal">
+      <div class="eyebrow">owner's note</div>
+      <h2>To make every<br>box feel like<br>a tiny hug.</h2>
+      <p>Our goal is simple: I want the moment you open a Meowchi box to feel the way my kitchen feels at 6am — warm rice, warm light, three cats politely asking what's for breakfast.</p>
+      <p>We won't scale past what our hands can fold. We'll always answer your emails. And we'll keep inventing characters until the whole shelf feels like a little neighborhood.</p>
+      <div class="goal-sig">— Abby, founder &amp; head squisher</div>
+    </div>
+  </div>
+  <svg class="goal-deco" viewBox="0 0 320 280"><use href="#"/></svg>
+</section>
+
+<!-- FLAVOR OF MONTH -->
+<section class="section fotm" id="fotm">
+  <div class="section-inner">
+    <div class="fotm-inner">
+      <div class="fotm-visual reveal">
+        <div class="badge">April<br>'26</div>
+      </div>
+      <div class="fotm-copy reveal">
+        <div class="eyebrow">flavor of the month</div>
+        <div class="flavor-name">Hanami<br>Hojicha.</div>
+        <div class="sub">A limited guest character &mdash; Momo, the roasted-tea tabby.</div>
+        <p>Earthy roasted green tea whipped into a toasted-barley cream, folded inside our signature pillowy shell and finished with a cherry-blossom salt. Gentle, grown-up, and gone before May.</p>
+        <div class="fotm-notes">
+          <span>Roasted hojicha</span>
+          <span>Toasted barley</span>
+          <span>Sakura salt</span>
+          <span>Limited · 300 boxes</span>
+        </div>
+        <a href="#order" class="btn-primary">Reserve a box →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonials" id="testimonials">
+  <div class="section-inner">
+    <div class="eyebrow">kind words</div>
+    <h2>From our<br>tiny fanbase.</h2>
+    <p class="section-sub">Reviews from humans who met a cat-shaped dessert and didn't recover.</p>
+    <div class="test-row">
+      <div class="test-card reveal">
+        <div class="test-quote">I opened the box, gasped audibly, and then ate Chat in three bites. No regrets. Immediately re-ordered.</div>
+        <div class="test-meta">
+          <div class="test-avatar">J</div>
+          <div class="test-who"><strong>Jules T.</strong><span>Repeat customer · Oakland</span></div>
+        </div>
+      </div>
+      <div class="test-card reveal">
+        <div class="test-quote">Zoro arrived perfectly chilled, squished once, and bounced back. Just like my therapist told me to.</div>
+        <div class="test-meta">
+          <div class="test-avatar">M</div>
+          <div class="test-who"><strong>Mira K.</strong><span>Matcha loyalist · Brooklyn</span></div>
+        </div>
+      </div>
+      <div class="test-card reveal">
+        <div class="test-quote">Bought these for my partner's birthday. He cried. I cried. The cat did not cry but she did sit next to the box.</div>
+        <div class="test-meta">
+          <div class="test-avatar">R</div>
+          <div class="test-who"><strong>Rafa D.</strong><span>First-timer · LA</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" id="faq">
+  <div class="section-inner">
+    <div style="text-align:center; margin-bottom: 50px;">
+      <div class="eyebrow">curious cats ask </div>
+      <h2>Frequently<br>Asked Questions.</h2>
+    </div>
+    <div class="faq-list" id="faqList"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="order">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="wordmark">Meowchi</span>
+      <p>Your stop for a purr-feet bite. Hand-folded with three cats' worth of love.</p>
+    </div>
+    <div>
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="#">Box of Six</a></li>
+        <li><a href="#">Box of Twelve</a></li>
+        <li><a href="#">Flavor of the Month</a></li>
+        <li><a href="#">Gift cards</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>The Cats</h4>
+      <ul>
+        <li><a href="#mochi">Poppy</a></li>
+        <li><a href="#mochi">Chat</a></li>
+        <li><a href="#mochi">Zoro</a></li>
+        <li><a href="#fotm">Guest stars</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Hello</h4>
+      <ul>
+        <li><a href="mailto:hello@meowchi.cafe">hello@meowchi.cafe</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">TikTok</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Meowchi Co. — Folded in California.</span>
+    <span class="jp">ニャー ありがとう</span>
+  </div>
+</footer>
+
+<!-- TWEAKS PANEL -->
+<div class="tweaks" id="tweaksPanel">
+  <h4>Tweaks <span class="kana">ツィーク</span></h4>
+  <div class="tweak-row">
+    <label>Background</label>
+    <div class="swatches" data-key="theme">
+      <div class="sw" data-val="cream" style="background:#fdf4e3" title="Cream"></div>
+      <div class="sw" data-val="pink" style="background:#fef0f5" title="Pink"></div>
+      <div class="sw" data-val="sage" style="background:#f0f2e0" title="Sage"></div>
+    </div>
+  </div>
+  <div class="tweak-row">
+    <label>Accent</label>
+    <div class="opts" data-key="accent">
+      <button class="opt" data-val="green">Olive</button>
+      <button class="opt" data-val="pink">Pink</button>
+    </div>
+  </div>
+  <div class="tweak-row">
+    <label>Featured cat</label>
+    <div class="opts" data-key="featured">
+      <button class="opt" data-val="poppy">Poppy</button>
+      <button class="opt" data-val="chat">Chat</button>
+      <button class="opt" data-val="zoro">Zoro</button>
+    </div>
+  </div>
+</div>
+
+<script src="src/characters.js?v=2"></script>
+<script src="src/faqs.js?v=2"></script>
+<script src="src/app.js?v=2"></script>
+</body>
+</html>
