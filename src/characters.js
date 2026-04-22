@@ -18,7 +18,7 @@ const CHARACTERS = [
     id: "chat",
     name: "Chat",
     breed: "Black Shorthair",
-    flavor: "Dark Chocolate",
+    flavor: "Cocoa",
     tagline: "The Rogue",
     color: "#4a2818",
     deep: "#1a0e08",
