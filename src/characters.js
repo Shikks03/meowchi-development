@@ -13,7 +13,7 @@ const CHARACTERS = [
     traits: ["Extroverted", "Radiant", "Standing-ovation energy"],
     bite: "Bright, jammy strawberry folded into whipped cream — like the first warm day of spring.",
     debut: "Spring '24",
-    gif: "strawberry.gif"
+    gif: "strawberryoptimize2.gif"
   },
   {
     id: "chat",
@@ -28,7 +28,7 @@ const CHARACTERS = [
     traits: ["Mysterious", "Mischievous", "One-liner expert"],
     bite: "Dark Valrhona ganache wrapped in a midnight-soft shell — bittersweet and a little dangerous.",
     debut: "Autumn '24",
-    gif: "chocolate.gif"
+    gif: "chocolateoptimize2.gif"
   },
   {
     id: "zoro",
@@ -43,7 +43,7 @@ const CHARACTERS = [
     traits: ["Quiet", "Composed", "Napping champion"],
     bite: "Stone-ground Uji matcha dusted thick over a grassy, gently bitter center — grown-up, grounded, green.",
     debut: "Summer '24",
-    gif: "matcha.gif"
+    gif: "matchaoptimize2.gif"
   }
 ];
 

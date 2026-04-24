@@ -42,11 +42,11 @@
 (function heroCat() {
   const cats = [
     { src: 'assets/poppy.svg',       label: 'Poppy' },
-    { src: 'assets/strawberry.gif',  label: 'Poppy' },
-    { src: 'assets/chat.svg',        label: 'Chat' },
-    { src: 'assets/chocolate.gif',   label: 'Chat' },
-    { src: 'assets/zoro.svg',        label: 'Zoro' },
-    { src: 'assets/matcha.gif',      label: 'Zoro' },
+    { src: 'assets/strawberryoptimize2.gif',  label: 'Poppy' },
+    { src: 'assets/chat.svg',                label: 'Chat' },
+    { src: 'assets/chocolateoptimize2.gif',  label: 'Chat' },
+    { src: 'assets/zoro.svg',                label: 'Zoro' },
+    { src: 'assets/matchaoptimize2.gif',     label: 'Zoro' },
   ];
   const img = document.getElementById('heroCatImg');
   if (!img) return;
