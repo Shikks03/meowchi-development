@@ -212,3 +212,21 @@ document.addEventListener('click', (e) => {
   document.querySelectorAll('.char-card').forEach(c => c.dataset.featured = 'false');
   card.dataset.featured = 'true';
 });
+
+// --- Shop box links pulse the hero CTA ---
+(function shopBoxGlow() {
+  const cta = document.getElementById('heroCta');
+  if (!cta) return;
+
+  function triggerGlow() {
+    cta.classList.remove('glowing');
+    void cta.offsetWidth; // reflow to restart animation
+    cta.classList.add('glowing');
+    cta.addEventListener('animationend', () => cta.classList.remove('glowing'), { once: true });
+  }
+
+  ['shopBox3', 'shopBox6'].forEach(id => {
+    const link = document.getElementById(id);
+    if (link) link.addEventListener('click', triggerGlow);
+  });
+})();

@@ -120,6 +120,13 @@ body {
 }
 .btn-primary:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--choc); }
 .btn-primary:active { transform: translate(3px, 3px); box-shadow: 2px 2px 0 var(--choc); }
+@keyframes btn-pulse-glow {
+  0%   { box-shadow: 5px 5px 0 var(--choc); }
+  30%  { box-shadow: 5px 5px 0 var(--choc), 0 0 18px 6px var(--pink-deep), 0 0 36px 14px color-mix(in oklab, var(--pink-deep) 40%, transparent); }
+  60%  { box-shadow: 5px 5px 0 var(--choc), 0 0 24px 8px var(--pink-deep), 0 0 48px 18px color-mix(in oklab, var(--pink-deep) 30%, transparent); }
+  100% { box-shadow: 5px 5px 0 var(--choc); }
+}
+.btn-primary.glowing { animation: btn-pulse-glow 3.8s ease-in-out; }
 .btn-ghost {
   background: transparent; color: var(--choc);
   padding: 16px 28px; border-radius: 999px; font-weight: 700; font-size: 16px;
