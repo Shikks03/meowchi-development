@@ -116,6 +116,7 @@
   const el = document.getElementById('giantMochi');
   const hero = document.querySelector('.hero');
   if (!el || !hero) return;
+  if (window.innerWidth <= 900) return;
 
   let ticking = false;
   function update() {
