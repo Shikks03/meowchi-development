@@ -76,11 +76,8 @@
 // --- Time-based hero cat (cycles every 5 minutes) ---
 (function heroCat() {
   const cats = [
-    { src: 'assets/poppy.svg',       label: 'Poppy' },
-    { src: 'assets/strawberryoptimize2.gif',  label: 'Poppy' },
-    { src: 'assets/chat.svg',                label: 'Chat' },
+    { src: 'assets/strawberryoptimize2.gif', label: 'Poppy' },
     { src: 'assets/chocolateoptimize2.gif',  label: 'Chat' },
-    { src: 'assets/zoro.svg',                label: 'Zoro' },
     { src: 'assets/matchaoptimize2.gif',     label: 'Zoro' },
   ];
   const img = document.getElementById('heroCatImg');
@@ -88,7 +85,7 @@
 
   function getCat() {
     const now = new Date();
-    const block = Math.floor((now.getHours() * 60 + now.getMinutes()) / 5);
+    const block = now.getUTCHours() * 60 + now.getUTCMinutes();
     return cats[block % cats.length];
   }
 
@@ -108,7 +105,7 @@
   // recheck at the start of each 5-minute boundary
   function scheduleNext() {
     const now = new Date();
-    const msUntilNext = (5 - (now.getMinutes() % 5)) * 60000 - now.getSeconds() * 1000 - now.getMilliseconds();
+    const msUntilNext = 60000 - now.getUTCSeconds() * 1000 - now.getUTCMilliseconds();
     setTimeout(() => { update(); scheduleNext(); }, msUntilNext);
   }
   scheduleNext();
