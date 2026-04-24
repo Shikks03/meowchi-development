@@ -1,5 +1,40 @@
 // ======= Meowchi app =======
 
+// --- Page loader ---
+(function pageLoader() {
+  const loader = document.getElementById('loader');
+  if (!loader) return;
+
+  const assetSrcs = [
+    'assets/logo.jpg',
+    'assets/chat.svg',
+    'assets/poppy.svg',
+    'assets/zoro.svg',
+    'assets/strawberryoptimize2.gif',
+    'assets/chocolateoptimize2.gif',
+    'assets/matchaoptimize2.gif',
+  ];
+
+  function loadAsset(src) {
+    return new Promise(resolve => {
+      const img = new Image();
+      img.onload = img.onerror = resolve;
+      img.src = src;
+    });
+  }
+
+  function dismiss() {
+    loader.classList.add('loaded');
+    setTimeout(() => loader.remove(), 600);
+  }
+
+  const fontsReady = document.fonts ? document.fonts.ready : Promise.resolve();
+  Promise.all([fontsReady, ...assetSrcs.map(loadAsset)]).then(dismiss);
+
+  // Failsafe: never block the user more than 6 seconds
+  setTimeout(dismiss, 6000);
+})();
+
 // --- Render characters ---
 (function renderCharacters() {
   const row = document.getElementById('charRow');

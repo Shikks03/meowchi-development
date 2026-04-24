@@ -649,6 +649,73 @@ body[data-accent="green"] { --accent: var(--olive); }
   .tweaks { width: calc(100vw - 40px); }
 }
 
+/* ========== LOADER ========== */
+#loader {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: var(--cream, #fdf4e3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.55s ease, visibility 0.55s ease;
+}
+#loader.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.loader-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+  text-align: center;
+  user-select: none;
+}
+.loader-sparkles {
+  display: flex;
+  gap: 1.4rem;
+  font-size: 1.3rem;
+  color: var(--pink-deep, #e89bb3);
+  margin-bottom: 0.25rem;
+}
+.loader-sparkles span:nth-child(1) { animation: twinkle 2.2s ease-in-out infinite 0s; }
+.loader-sparkles span:nth-child(2) { animation: twinkle 2.2s ease-in-out infinite 0.45s; }
+.loader-sparkles span:nth-child(3) { animation: twinkle 2.2s ease-in-out infinite 0.9s; }
+.loader-brand {
+  font-family: 'Caprasimo', cursive;
+  font-size: clamp(2.6rem, 9vw, 4.8rem);
+  color: var(--olive, #5d6b2f);
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+.loader-tagline {
+  font-family: 'Caveat', cursive;
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  font-weight: 600;
+  color: var(--blush, #d9758a);
+}
+.loader-dots {
+  display: flex;
+  gap: 0.65rem;
+  margin-top: 1.2rem;
+  align-items: flex-end;
+}
+.dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  animation: loader-bounce 1s ease-in-out infinite;
+}
+.dot-strawberry { background: #f4b6c9; animation-delay: 0s; }
+.dot-chocolate  { background: #4a2818; animation-delay: 0.18s; }
+.dot-matcha     { background: #8a9a3f; animation-delay: 0.36s; }
+@keyframes loader-bounce {
+  0%, 75%, 100% { transform: translateY(0) scale(1); opacity: 0.65; }
+  38%            { transform: translateY(-13px) scale(1.15); opacity: 1; }
+}
+
 /* ========== UTILITY ========== */
 .reveal {
   opacity: 0; transform: translateY(30px);
