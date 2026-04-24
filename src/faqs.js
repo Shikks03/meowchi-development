@@ -5,8 +5,12 @@ const FAQS = [
     a: "Our mochi are best eaten immediately, but if kept chilled in the fridge it can last for 2 days."
   },
   {
-    q: "Do you do deliveries?",
-    a: "Yes! We can deliver through Lalamove. Orders placed will be released the next day after the order has been placed. We pause shipping on extreme-heat hours to keep every purr-fect bite safe."
+    q: "Where and when can I pick up my order?",
+    a: "We have two pick-up locations:<br><br>📍 <strong>Bacoor, Cavite</strong> — Sundays only<br>• 10:00 AM – 12:00 NN at Vista NoMo<br>• 2:00 PM – 6:00 PM at Lokal Mall<br><br>📍 <strong>Sampaloc, Manila</strong> — Monday, Tuesday & Wednesday (also Saturday, April 25)<br>• Monday: 10:30 AM – 11:30 AM<br>• Tuesday: 2:00 PM – 3:00 PM<br>• Wednesday: 12:00 NN – 3:00 PM<br>• Saturday, April 25: 11:00 AM – 12:00 NN &amp; 4:00 PM – 5:00 PM at FEU Manila (ENB Canteen) / FEU Tech (Pandog)"
+  },
+  {
+    q: "When do you deliver?",
+    a: "📍 <strong>Bacoor, Cavite</strong> — Thursday, Friday &amp; Saturday, 3:00 PM – 5:00 PM only<br>📍 <strong>Sampaloc, Manila</strong> — Monday, Tuesday &amp; Wednesday (same times as pick-up)<br><br>To ensure your Meowchi arrives in its best quality, we avoid deliveries during very hot weather as high temperatures can affect its texture and freshness. 💗 Message us to arrange payment and confirm your delivery slot!"
   },
   {
     q: "What's in a Meowchi? Any allergens?",
