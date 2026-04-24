@@ -67,44 +67,17 @@ window.TWEAKS = /*EDITMODE-BEGIN*/{
       </div>
     </div>
     <div class="hero-stage">
-      <div class="floaty p1"><img src="assets/poppy.svg" alt=""></div>
-      <div class="floaty p2"><img src="assets/zoro.svg" alt=""></div>
-      <div class="floaty p3"><img src="assets/chat.svg" alt=""></div>
+      <div class="floaty p1"><img src="assets/chat.svg" alt=""></div>
+      <div class="floaty p2"><img src="assets/chat.svg" alt=""></div>
+      <div class="floaty p3"><img src="assets/poppy.svg" alt=""></div>
+      <div class="floaty p4"><img src="assets/poppy.svg" alt=""></div>
+      <div class="floaty p5"><img src="assets/zoro.svg" alt=""></div>
+      <div class="floaty p6"><img src="assets/zoro.svg" alt=""></div>
+      <div class="floaty p7"><img src="assets/poppy.svg" alt=""></div>
+      <div class="floaty p8"><img src="assets/zoro.svg" alt=""></div>
+      <div class="floaty p9"><img src="assets/chat.svg" alt=""></div>
       <div class="giant-mochi" id="giantMochi">
-        <!-- A big, central mochi blob that squishes on scroll -->
-        <svg viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <filter id="gm-wob">
-              <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="2" seed="5"/>
-              <feDisplacementMap in="SourceGraphic" scale="4"/>
-            </filter>
-            <radialGradient id="gm-grad" cx="40%" cy="35%" r="75%">
-              <stop offset="0%" stop-color="#fcdbe6"/>
-              <stop offset="70%" stop-color="#f4b6c9"/>
-              <stop offset="100%" stop-color="#d9758a"/>
-            </radialGradient>
-          </defs>
-          <g filter="url(#gm-wob)">
-            <path d="M 80 210 Q 55 160 90 120 Q 110 75 160 95 Q 190 55 220 85 Q 260 60 290 100 Q 340 95 355 145 Q 390 180 360 230 Q 380 280 325 295 Q 290 320 235 308 Q 180 325 135 305 Q 75 290 80 210 Z"
-                  fill="url(#gm-grad)" stroke="#4a2c1a" stroke-width="5"/>
-            <!-- ears -->
-            <path d="M 125 112 L 110 65 L 160 92 Z" fill="#f4b6c9" stroke="#4a2c1a" stroke-width="5"/>
-            <path d="M 275 92 L 310 62 L 305 118 Z" fill="#f4b6c9" stroke="#4a2c1a" stroke-width="5"/>
-            <path d="M 132 105 L 125 78 L 150 92 Z" fill="#c8627e"/>
-            <path d="M 284 90 L 298 70 L 298 108 Z" fill="#c8627e"/>
-            <!-- eyes -->
-            <ellipse cx="170" cy="185" rx="13" ry="19" fill="#4a2c1a"/>
-            <ellipse cx="258" cy="185" rx="13" ry="19" fill="#4a2c1a"/>
-            <circle cx="174" cy="178" r="5" fill="#fff"/>
-            <circle cx="262" cy="178" r="5" fill="#fff"/>
-            <!-- cheeks -->
-            <ellipse cx="140" cy="225" rx="28" ry="18" fill="#ff8aa8" opacity="0.55"/>
-            <ellipse cx="288" cy="225" rx="28" ry="18" fill="#ff8aa8" opacity="0.55"/>
-            <!-- nose & smile -->
-            <path d="M 207 215 Q 215 222 223 215 Q 219 228 215 230 Q 211 228 207 215 Z" fill="#c8627e" stroke="#4a2c1a" stroke-width="2"/>
-            <path d="M 195 238 Q 215 252 235 238" stroke="#4a2c1a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-          </g>
-        </svg>
+        <img id="heroCatImg" src="" alt="">
       </div>
     </div>
   </div>

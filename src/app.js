@@ -8,7 +8,12 @@
     <article class="char-card reveal" data-id="${c.id}" style="--card-color:${c.color}; --card-deep:${c.deep};">
       <div class="swatch-bg"></div>
       <div class="katakana">${c.katakana}</div>
-      <div class="char-avatar"><img src="assets/${c.id}.svg" alt="${c.name}"></div>
+      <div class="char-avatar">
+        ${c.gif
+          ? `<img src="assets/${c.gif}" alt="${c.name}">`
+          : `<img src="assets/${c.id}.svg" alt="${c.name}">`
+        }
+      </div>
       <span class="tag">${c.tagline}</span>
       <h3>${c.name}.</h3>
       <div class="char-meta">
@@ -31,6 +36,47 @@
       <div class="faq-a">${f.a}</div>
     </details>
   `).join('');
+})();
+
+// --- Time-based hero cat (cycles every 5 minutes) ---
+(function heroCat() {
+  const cats = [
+    { src: 'assets/poppy.svg',       label: 'Poppy' },
+    { src: 'assets/strawberry.gif',  label: 'Poppy' },
+    { src: 'assets/chat.svg',        label: 'Chat' },
+    { src: 'assets/chocolate.gif',   label: 'Chat' },
+    { src: 'assets/zoro.svg',        label: 'Zoro' },
+    { src: 'assets/matcha.gif',      label: 'Zoro' },
+  ];
+  const img = document.getElementById('heroCatImg');
+  if (!img) return;
+
+  function getCat() {
+    const now = new Date();
+    const block = Math.floor((now.getHours() * 60 + now.getMinutes()) / 5);
+    return cats[block % cats.length];
+  }
+
+  function update() {
+    const cat = getCat();
+    if (img.getAttribute('data-src') === cat.src) return;
+    img.style.opacity = '0';
+    setTimeout(() => {
+      img.src = cat.src;
+      img.alt = cat.label;
+      img.setAttribute('data-src', cat.src);
+      img.style.opacity = '1';
+    }, 300);
+  }
+
+  update();
+  // recheck at the start of each 5-minute boundary
+  function scheduleNext() {
+    const now = new Date();
+    const msUntilNext = (5 - (now.getMinutes() % 5)) * 60000 - now.getSeconds() * 1000 - now.getMilliseconds();
+    setTimeout(() => { update(); scheduleNext(); }, msUntilNext);
+  }
+  scheduleNext();
 })();
 
 // --- Scroll-driven giant mochi squish ---
